@@ -28,32 +28,27 @@ jobs:
           node-version: 16
           cache: "npm"
       - run: npm ci
-      # - name: Export slidev as PDF
-      #   run: npm run export --slide=${GITHUB_REF##*/} && npm run export:dark --slide=${GITHUB_REF##*/}
-      # - uses: softprops/action-gh-release@v1
-      #   with:
-      #     files: |
-      #       dist/*.pdf
-      # - name: Check if OGP is enabled
-      #   id: checkOGP
-      #   uses: ./.github/actions/checkOGP
-      #   with:
-      #     file: ${GITHUB_REF##*/}/slides.md
-      # - name: Copy custom files
-      #   run: |
-      #     mkdir -p setup
-      #     cp custom/setup/windicss.ts setup/windicss.ts
-      #     cp custom/global-bottom.vue global-bottom.vue
+      - name: Export slidev as PDF
+        run: npm run export --slide=${GITHUB_REF##*/} && npm run export:dark --slide=${GITHUB_REF##*/}
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/*.pdf
+      - name: Check if OGP is enabled
+        id: checkOGP
+        uses: ./.github/actions/checkOGP
+        with:
+          file: ${GITHUB_REF##*/}/slides.md
       - name: Generate index.html before building SPA
         if: ${{ steps.checkOGP.outputs.ogp == 'true' }}
         run: |
           npm run build:before --slide=${GITHUB_REF##*/} --pagesurl=${{ steps.configure-pages.outputs.base_url }}
       - name: Build slidev as SPA
         run: npm run build --slide=${GITHUB_REF##*/}
-      # - name: Generate preview image for OGP
-      #   if: ${{ steps.checkOGP.outputs.ogp == 'true' }}
-      #   run: |
-      #     npm run build:after --slide=${GITHUB_REF##*/}
+      - name: Generate preview image for OGP
+        if: ${{ steps.checkOGP.outputs.ogp == 'true' }}
+        run: |
+          npm run build:after --slide=${GITHUB_REF##*/}
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
