@@ -39,11 +39,11 @@ jobs:
       #   uses: ./.github/actions/checkOGP
       #   with:
       #     file: ${GITHUB_REF##*/}/slides.md
-      - name: Copy custom files
-        run: |
-          mkdir -p setup
-          cp custom/setup/windicss.ts setup/windicss.ts
-          cp custom/global-bottom.vue global-bottom.vue
+      # - name: Copy custom files
+      #   run: |
+      #     mkdir -p setup
+      #     cp custom/setup/windicss.ts setup/windicss.ts
+      #     cp custom/global-bottom.vue global-bottom.vue
       - name: Generate index.html before building SPA
         if: ${{ steps.checkOGP.outputs.ogp == 'true' }}
         run: |
