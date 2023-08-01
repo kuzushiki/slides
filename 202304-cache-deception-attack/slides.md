@@ -9,10 +9,10 @@ hideInToc: true # タイトルページを table of contents に含めない
 
 # ここから下は基本触らない
 # デザイン周りの設定
-fonts:
-  sans: 'BIZ UDPGothic,Robot'
-  serif: 'BIZ UDPGothic,Robot Slab'
-  mono: 'BIZ UDPGothic,Fira Code'
+# fonts:
+#   sans: 'BIZ UDPGothic,Robot'
+#   serif: 'BIZ UDPGothic,Robot Slab'
+#   mono: 'BIZ UDPGothic,Fira Code'
 highlighter: shiki
 lineNumbers: true
 
