@@ -131,7 +131,7 @@ ChatGPT
 `chat.openai[.]com/api/auth/session/test.css`のようなリンクを踏ませることで<br>
 被害者の下記情報がキャッシュされ、攻撃者に窃取される可能性があった
 
-<div class="grid grid-cols-[50%,50%]">
+<div class="grid grid-cols-[50%_50%]">
 <div>
 
 - メールアドレス
