@@ -9,10 +9,10 @@ hideInToc: true # タイトルページを table of contents に含めない
 
 # ここから下は基本触らない
 # デザイン周りの設定
-# fonts:
-#   sans: 'BIZ UDPGothic,Robot'
-#   serif: 'BIZ UDPGothic,Robot Slab'
-#   mono: 'BIZ UDPGothic,Fira Code'
+fonts:
+  sans: 'BIZ UDPGothic,Robot'
+  serif: 'BIZ UDPGothic,Robot Slab'
+  mono: 'BIZ UDPGothic,Fira Code'
 highlighter: shiki
 lineNumbers: true
 
@@ -75,7 +75,10 @@ OWASP Top 10 とは異なり、革新的な脆弱性を研究者目線で順位�
 </Footnotes>
 
 ---
-
+layout: figure
+figureCaption: https://knowledge.sakura.ad.jp/33411/ より引用
+figureUrl: img/2023-04-26-08-30-21.png
+---
 
 # 前提知識 - Webにおけるキャッシュとは？
 
@@ -86,7 +89,10 @@ OWASP Top 10 とは異なり、革新的な脆弱性を研究者目線で順位�
 -> レスポンスを再利用することでより高速にページを表示できる
 
 ---
-
+layout: figure
+figureCaption: https://portswigger.net/daily-swig/path-confusion-web-cache-deception-threatens-user-information-online より引用
+figureUrl: img/2023-04-22-16-13-07.png
+---
 
 # 攻撃の仕組み
 
