@@ -42,7 +42,7 @@ jobs:
       - name: Copy custom files
         run: |
           mkdir -p setup
-          cp custom/setup/windicss.ts setup/windicss.ts
+          cp custom/uno.config.ts uno.config.ts
           cp custom/global-bottom.vue global-bottom.vue
       - name: Generate index.html before building SPA
         if: ${{ steps.checkOGP.outputs.ogp == 'true' }}
