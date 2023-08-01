@@ -24,6 +24,9 @@ themeConfig:
   paginationY: t
 
 css: unocss
+
+githubPages:
+  ogp: true
 ---
 
 # {{ $slidev.configs.title }}
