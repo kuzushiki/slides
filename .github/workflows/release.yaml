@@ -34,11 +34,11 @@ jobs:
       #   with:
       #     files: |
       #       dist/*.pdf
-      - name: Check if OGP is enabled
-        id: checkOGP
-        uses: ./.github/actions/checkOGP
-        with:
-          file: ${GITHUB_REF##*/}/slides.md
+      # - name: Check if OGP is enabled
+      #   id: checkOGP
+      #   uses: ./.github/actions/checkOGP
+      #   with:
+      #     file: ${GITHUB_REF##*/}/slides.md
       - name: Copy custom files
         run: |
           mkdir -p setup
@@ -50,10 +50,10 @@ jobs:
           npm run build:before --slide=${GITHUB_REF##*/} --pagesurl=${{ steps.configure-pages.outputs.base_url }}
       - name: Build slidev as SPA
         run: npm run build --slide=${GITHUB_REF##*/}
-      - name: Generate preview image for OGP
-        if: ${{ steps.checkOGP.outputs.ogp == 'true' }}
-        run: |
-          npm run build:after --slide=${GITHUB_REF##*/}
+      # - name: Generate preview image for OGP
+      #   if: ${{ steps.checkOGP.outputs.ogp == 'true' }}
+      #   run: |
+      #     npm run build:after --slide=${GITHUB_REF##*/}
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
