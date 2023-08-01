@@ -10,14 +10,13 @@
     "export:dark": "slidev export --dark --output dist/${npm_config_slide}-dark.pdf --format pdf ${npm_config_slide}/slides.md"
   },
   "dependencies": {
-    "@slidev/cli": "^0.40.16",
+    "@slidev/cli": "^0.36.5",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*",
-    "gray-matter": "^4.0.3",
-    "pdf-img-convert": "^1.2.1",
-    "slidev-theme-academic": "*"
+    "slidev-theme-academic": "^1.1.1",
+    "slidev-theme-purplin": "^1.1.0"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.33.0"
+    "playwright-chromium": "^1.29.1"
   }
 }

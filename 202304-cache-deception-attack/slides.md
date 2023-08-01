@@ -22,8 +22,6 @@ coverDate: ''
 themeConfig:
   paginationX: r
   paginationY: t
-
-css: unocss
 ---
 
 # {{ $slidev.configs.title }}
