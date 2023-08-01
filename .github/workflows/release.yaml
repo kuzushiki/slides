@@ -28,12 +28,12 @@ jobs:
           node-version: 16
           cache: "npm"
       - run: npm ci
-      - name: Export slidev as PDF
-        run: npm run export --slide=${GITHUB_REF##*/} && npm run export:dark --slide=${GITHUB_REF##*/}
-      - uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            dist/*.pdf
+      # - name: Export slidev as PDF
+      #   run: npm run export --slide=${GITHUB_REF##*/} && npm run export:dark --slide=${GITHUB_REF##*/}
+      # - uses: softprops/action-gh-release@v1
+      #   with:
+      #     files: |
+      #       dist/*.pdf
       - name: Check if OGP is enabled
         id: checkOGP
         uses: ./.github/actions/checkOGP
