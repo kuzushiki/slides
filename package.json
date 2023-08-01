@@ -14,7 +14,8 @@
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*",
     "gray-matter": "^4.0.3",
-    "pdf-img-convert": "^1.2.1"
+    "pdf-img-convert": "^1.2.1",
+    "slidev-theme-academic": "*"
   },
   "devDependencies": {
     "playwright-chromium": "^1.33.0"
