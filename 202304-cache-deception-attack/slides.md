@@ -77,7 +77,7 @@ OWASP Top 10 とは異なり、革新的な脆弱性を研究者目線で順位�
 ---
 layout: figure
 figureCaption: https://knowledge.sakura.ad.jp/33411/ より引用
-figureUrl: /2023-04-26-08-30-21.png
+figureUrl: //2023-04-26-08-30-21.png
 ---
 
 # 前提知識 - Webにおけるキャッシュとは？
@@ -91,7 +91,7 @@ figureUrl: /2023-04-26-08-30-21.png
 ---
 layout: figure
 figureCaption: https://portswigger.net/daily-swig/path-confusion-web-cache-deception-threatens-user-information-online より引用
-figureUrl: /2023-04-22-16-13-07.png
+figureUrl: //2023-04-22-16-13-07.png
 ---
 
 # 攻撃の仕組み
