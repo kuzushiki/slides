@@ -1,0 +1,44 @@
+p,li {
+    font-size: 15pt !important;
+    letter-spacing: normal !important;
+    line-height: 1.3em !important;
+  }
+
+blockquote > p {
+    font-size: 12pt !important;
+    letter-spacing: normal !important;
+    line-height: 1.3em !important;
+  }
+
+code {
+  font-size: 12pt !important;
+  letter-spacing: normal !important;
+  line-height: 1.3em !important;
+}
+
+.slidev-code {
+  border: solid #4D1D95 !important;
+}
+
+blockquote{
+  border-radius: 0px !important;
+  position:relative !important;
+  border-left:3px solid #4D1D95 !important;
+  padding-left:10px !important;
+}
+blockquote:before{
+  position:absolute !important;
+  content:'”' !important;
+  font-size: 25px !important;
+  color:#4D1D95 !important;
+}
+blockquote p{
+  position:relative !important;
+  padding-left:30px !important;
+}
+blockquote cite{
+  display: block !important;
+  font-size:0.8rem !important;
+  color:#4D1D95 !important;
+  text-align:right !important;
+}
